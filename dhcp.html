@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Netplan - DHCP </title>
+  <link rel="shortcut icon" href="../Imagens/N.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   
+   <!-- Meu estilo -->
+   <link rel="stylesheet" href="../CSS/normalize.css">
+   <link rel="stylesheet" href="../CSS/style.css">
+
+  <!-- Icons -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700|Pacifico' rel='stylesheet' type='text/css'>
+
+   <!-- jQuery and JS bundle w/ Popper.js -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
+  </head>
+
+<body>
+  <nav class="menu">
+    <a href="#"> NetHelp  <span class="linux"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      width="30" height="30"
+      viewBox="0 0 172 172"
+      style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><path d="M86,158.24c-39.89705,0 -72.24,-32.34295 -72.24,-72.24v0c0,-39.89705 32.34295,-72.24 72.24,-72.24v0c39.89705,0 72.24,32.34295 72.24,72.24v0c0,39.89705 -32.34295,72.24 -72.24,72.24z" fill="#ffffff"></path><g id="original-icon" fill="#dd4814"><path d="M86,4.3c-45.12291,0 -81.7,36.57709 -81.7,81.7c0,45.12291 36.57709,81.7 81.7,81.7c45.12291,0 81.7,-36.57709 81.7,-81.7c0,-45.12291 -36.57709,-81.7 -81.7,-81.7zM114.595,116.59665c0,2.68385 -1.74838,5.05723 -4.30968,5.85381c-0.60049,0.18382 -1.20916,0.2737 -1.81782,0.2737c-1.97714,0 -3.88484,-0.95998 -5.04906,-2.65525l-33.75435,-49.09761l0.00817,45.64987c0,3.38647 -2.74103,6.1275 -6.1275,6.1275c-3.38647,0 -6.1275,-2.74103 -6.1275,-6.1275l-0.01225,-65.32732v-0.00409v-0.04902c0,-0.12255 0.0286,-0.23693 0.03677,-0.3554c0.01634,-0.27369 0.0286,-0.5433 0.0817,-0.81292c0.04085,-0.20425 0.1103,-0.39624 0.16749,-0.59232c0.05311,-0.18382 0.09804,-0.36765 0.16748,-0.54739c0.0817,-0.20016 0.18791,-0.37991 0.29004,-0.56781c0.08579,-0.1634 0.1634,-0.33089 0.26553,-0.48612c0.11847,-0.18383 0.26553,-0.34723 0.40442,-0.51471c0.11438,-0.13889 0.21242,-0.28187 0.33905,-0.41259c0.21242,-0.21651 0.45344,-0.4085 0.69854,-0.59232c0.07353,-0.05311 0.13072,-0.12255 0.20425,-0.17157c0.00409,-0.00408 0.01226,-0.00408 0.01634,-0.00817c0.33497,-0.22876 0.69445,-0.42892 1.07027,-0.58824c0.75981,-0.32272 1.56455,-0.47795 2.36113,-0.47795c0.00817,0 0.01226,0 0.02043,0v0c0.10621,0 0.20833,0.02451 0.31455,0.03268c0.28595,0.01634 0.57598,0.03268 0.85785,0.08579c0.18382,0.03677 0.3554,0.10213 0.53105,0.15115c0.20425,0.06128 0.4085,0.10621 0.60867,0.18791c0.17566,0.07353 0.33497,0.16749 0.50245,0.25736c0.18383,0.09804 0.37582,0.18382 0.55148,0.29821c0.1634,0.10621 0.30638,0.24101 0.45752,0.36357c0.15523,0.12664 0.31863,0.24102 0.46161,0.38399c0.20833,0.20425 0.38399,0.43301 0.55964,0.66177c0.06128,0.0817 0.13889,0.14706 0.20016,0.23284l0.02451,0.03677c0.00409,0.00408 0.00817,0.01226 0.01225,0.01634l33.72984,49.04859v-45.59268c0,-3.38646 2.74104,-6.1275 6.1275,-6.1275c3.38647,0 6.1275,2.74103 6.1275,6.1275z"></path></g></g></g></svg></span> </a>   
+
+    <ul> 
+      <li> <a href="index.html"> INICIO </a> </li>
+      <li> <a href="sobre.html"> SOBRE  </a> </li>
+      </li>
+      <li> <a href="#" class="servicos"> SERVIÇOS <span class="material-icons">
+        menu
+        </span> </a>
+        <ul class="itensservicos">
+        <li> <a href="hosts.html"> TABELA HOSTS </a> </li>
+              <li> <a href="icmp.html"> SERV APACHE </a> </li>
+              <li> <a class="netplan"> NETPLAN <span class="material-icons">
+                arrow_drop_down
+                </span> </a>
+                <ul class="itensnetplan">
+                  <hr>
+                  <li> <a href="manual.html"> MANUAL </a> </li>
+                  <li> <a href="dhcp.html"> DHCP </a> </li>
+                  <hr class="hrbaixo">
+                </ul>
+              </li>
+              <li> <a href="samba.html"> SERV SAMBA </a> </li>
+    </ul>
+  </ul>
+  </nav>
+  <section id="descnetplan">
+    <br> 
+    <h2> Protocolo DHCP </h2>
+    <br>
+    <p> DHCP é a sigla para Dynamic Host Configuration Protocol. </p>
+    <br>
+   <p> Trata-se de um protocolo utilizado em redes de computadores que permite a estes obterem um endereço IP automaticamente. </p>
+   <br>
+   <p> O Netplan lê as configurações de rede a partir de arquivos .yaml, que podem estar localizados nos seguintes diretórios: </p>
+   <br>
+   <ul>
+    <li> /run/netplan/ </li>
+    <br>
+    <li> /etc/netplan/ </li>
+    <br>
+    <li> /lib/netplan/ </li>
+  </ul>
+  <br>
+  <p>  O diretório /etc/netplan/ é o local mais comum para encontrar e colocar esses arquivos de configuração. </p>
+  <br>
+  <p> O Netplan processa os arquivos yaml e a partir deles gera as configurações de backend necessárias para o renderizador (daemon) de rede do sistema. </p>
+  <br>
+  <p> Segundo RODRIGUES (2017), o protocolo DHCP (Dynamic Host Configuration Protocol), é um protocolo de serviço da arquitetura TCP/IP que oferece configuração dinâmica de IP nos terminais da rede.
+    Criado para automatizar a tarefa no fornecimento de endereços IP na rede, o DHCP é um serviço que garante comodidade para redes que utilizam dispositivos móveis (portáteis) ou que possuem uma faixa de endereços IP limitada.
+    O DHCP utiliza o modelo cliente-servidor, ou seja, de forma hierárquica. Resumidamente, o DHCP atua quando um dispositivo se conecta a uma rede, o host/cliente DHCP envia um pacote UDP em broadcast (destinado a todas ás máquinas) com uma requisição DHCP para a porta 67. </p>
+    <br>
+    <p>  
+    Portanto, uma vez que a máquina adquire um endereço IP, ele automaticamente se torna indisponível para uso no momento. Quando desligada ou desconectada da rede, o endereço de IP que estava sendo usado, volta a ficar disponível para ser usado por qualquer outra máquina conectada à rede.
+    </p>
+    <br>
+   <hr>
+</section>
+  <section id="netplan">
+    <div>
+
+      <h1> Exemplo: </h1>
+      <img src="../Imagens/dhcp4.png">
+        
+    </div>
+  </section>
+  
+  <footer> 
+    <div class="container">
+      <div class="sec aboutus">
+        <h2> Siga-nos </h2>
+        <p> Siga-nos nas redes sociais e fique por dentro de todas as nossas ações, apoio Fatec Osasco.</p>
+        <ul class="sci">
+          <span class="facebook"> <li> <a href="https://www.facebook.com/FatecOsascoPrefeitoHirantSanazar/"> <i class="fa fa-facebook" aria-hidden="true"> </i> </a> </li> </span>
+          <span class="instagram"> <li> <a href="https://www.instagram.com/fatec_osasco/?hl=pt-br"> <i class="fa fa-instagram" aria-hidden="true"> </i>  </a> </li> </span>
+          <span class="twitter"> <li> <a href="https://twitter.com/FatecOsasco?s=20"> <i class="fa fa-twitter" aria-hidden="true"> </i>  </a> </li> </span>
+          <span class="youtube"> <li> <a href="https://www.youtube.com/channel/UC9cP9DOIlpGGoIDFxbPZqcw"> <i class="fa fa-youtube-play" aria-hidden="true"> </i>  </a> </li> </span>
+        </ul>
+      </div>
+      <div class="sec quickLinks">
+        <h2> Quick Links </h2>
+        <ul>
+          <li> <a href="faq.html"> <i class="fa fa-search" aria-hidden="true"></i> FAQ </a> </li>
+          <li> <a href="politica-de-privacidade.html"> <i class="fa fa-lock" aria-hidden="true"></i> Política de Privacidade </a> </li>
+          <li> <a href="ajuda.html"> <i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda </a> </li>
+          <li> <a href="termos&condicoes.html"> <i class="fa fa-clipboard" aria-hidden="true"></i> Termos & Condições </a> </li>
+          <li> <a href="quemsomos.html"> <i class="fa fa-users" aria-hidden="true"></i> Quem Somos </a></li>
+          <li> <a href="#sec contact"> <i class="fa fa-at" aria-hidden="true"></i> Contato </a> </li>
+        </ul>
+      </div>
+      <div class="sec contact">
+        <h2> Contato </h2>
+        <ul class="info"> 
+          <li>
+            <span> <i class="fa fa-map-marker" aria-hidden="true"> </i> </span>
+            <span> Rua Pedro Rissato, 30 - Vila dos Remédios, Osasco - SP </span>
+          </li>
+          <li>
+            <span> <i class="fa fa-phone" aria-hidden="true"> </i> </span>
+            <p> <a href="tel:+55 (11) 96953-1226"> +55 (11) 96953-1226 </a> <br> </p>
+          </li>
+          <li>
+            <span> <i class="fa fa-phone" aria-hidden="true"> </i> </span>
+            <p> <a href="tel:+55 (11) 97581-1042"> +55 (11) 97581-1042 </a> <br> </p>
+          </li>
+  
+          <li>
+            <span> <i class="fa fa-envelope" aria-hidden="true"> </i> </span>
+            <p> <a href="gabriel.reis7@fatec.sp.gov.br"> gabriel.reis7@fatec.sp.gov.br </a> </p>
+          </li>
+          <li>
+            <span> <i class="fa fa-envelope" aria-hidden="true"></i> </span>
+            <p> <a href="matheus.pereira55@fatec.sp.gov"> matheus.pereira55@fatec.sp.gov.br </a> </p>
+          </li>
+  
+        </ul>
+  
+      </div>
+
+    </div>
+
+    </footer>
+
+    <div class="copyrightText">
+      <p> Copyright © 2021 Ubuntu NetHelp. Todos os direitos reservados. </p>
+    </div>
+
+    <script type="text/javascript" src="../JS/javascript.js"> </script>
+
+
+</body>
+
+</html>
